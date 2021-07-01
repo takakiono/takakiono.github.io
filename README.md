@@ -1,1 +1,0 @@
-# takakiono.github.io
