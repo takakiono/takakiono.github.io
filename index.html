@@ -1,43 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>ToDoリスト</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <script src=""></script>
-    </head>
-    <body>
-        <header>
-            <a class="header-logo" href="/">ToDo</a>
-        </header>
-        <div class="container">
-            <div class="container-header">
-                <h1>ToDoリスト</h1>
-                <a href="/new" class="new-button">+ 新規追加</a>
-            </div>
-            <div class="index-table-wrapper">
-                <div class="table-head">
-                    <span class="id-column">ID</span>
-                    <span>やること</span>
-                </div>
+<head>
+  <meta charset="utf-8">
+  <title>Progate</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- ここでFont Awesomeを読み込んでください -->
+  <script src="https://kit.fontawesome.com/f2142d094a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ここにコードを書いていきましょう -->
+   <header>
+     <div class="container">
+       <div class="header-left">
+         <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+       </div>
+       <div class="header-right">
+         <a href="#" class="login">ログイン</a>
+       </div>
+     </div>
+   </header>
 
-                <ul class="table-body">
-                    <% lists.forEach((list) => { %>
-                    <li>
-                        <div class="item-data">
-                            <span class="id-column"><%= list.id %></span>
-                            <span class="name-column"><%= list.name %></span>
-                        </div>
-                        <div class="item-menu">
-                            <form action="/delete/<%= list.id %>" method="post">
-                                <input type="submit" value="削除">
-                            </form>
-                            <a href="/edit/<%= list.id %>">編集</a>
-                        </div>
-                    </li>
-                    <% }); %>
-                </ul>
+   <div class="top-wrapper">
+     <div class="container">
+       <h1>LEAEN TO CODE.</h1>
+       <h1>LEARN TO BE CREATIVE.</h1>
+       <p>Progateはオンラインプログラミング学習サービスです。</p>
+       <p>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
+       <div class="btn-wrapper">
+           <a class="btn signup" href="#">新規登録はこちら</a>
+           <p>or</p>
+           <a class="btn facebook" href="#"><span class="fa fa-facebook"></span>Facebookで登録</a>
+           <a class="btn twitter" href="#"><span class="fa fa-twitter"></span>Twitterで登録</a>
+       </div>
+    </div>
+   </div>
+
+   <div class="lesson-wrapper">
+       <div class="container">
+           <div class="heading">
+               <h2>Learn Where to Get Started!!</h2>
+           </div>
+           <div class="lessons">
+               <div class="lesson">
+                   <div class="lesson-icon">
+                       <img src="https://prog-8.com/images/html/advanced/html.png">
+                       <p>HTML & CSS</p>
+                    </div>
+                    <p class="txt-content">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+               </div>
+               <div class="lesson">
+                <div class="lesson-icon">
+                    <img src="https://prog-8.com/images/html/advanced/jQuery.png">
+                    <p>jQuery</p>
+                 </div>
+                 <p class="txt-content">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://prog-8.com/images/html/advanced/ruby.png">
+                        <p>Ruby</p>
+                    </div>
+                    <p class="txt-content">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://prog-8.com/images/html/advanced/php.png">
+                        <p>PHP</p>
+                    </div>
+                    <p class="txt-content">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+                </div>
+           </div>
+       </div>
+   </div>
+
+   <div class="message-wrapper">
+       <div class="container">
+           <div class="heading">
+        　　    <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
+            　　<h3>Let's learn to code, learn to be creative!</h3>
+            </div>
+            <a class="btn message" href="#">さっそく開発する</a>
+       </div>
+   </div>
+
+   <footer>
+       <div class="container">
+           <div class="footer-left">
+               <img class="logo" src="https://prog-8.com/images/html/advanced/footer_logo.png">
+               <p>Learn to Code, Learn to be Creative.</p>
             </div>
         </div>
-    </body>
+   </footer>
+</body>
 </html>
