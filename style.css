@@ -1,9 +1,7 @@
-html, body,
-ul, ol, li,
-h1, h2, h3, h4, h5, h6, p, div {
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
 }
+
 body {
     margin: 0;
   }
@@ -21,7 +19,8 @@ body {
   }
   
   .container {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -35,7 +34,16 @@ body {
   .top-wrapper p {
     opacity: 0.7;
     font-size: 14px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .btn-wrapper p {
+    margin: 10px 0;
   }
   
   .signup {
@@ -103,8 +111,52 @@ body {
     cursor: pointer;
     display: block;
   }
+
+  .header-right div {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+  }
   
+  .header-right div:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .menu-icon {
+      color: white;
+      float: right;
+      font-size: 25px;
+      padding: 21px 0;
+      display: none;
+  }
+
+  .menu div{
+    line-height: 65px;
+    padding: 10px 25px;
+    display: block;
+    transition: all 0.5s;
+    font-size:24px;
+  }
+
+  .menu div:hover {
+    background-color: rgba(82, 76, 76, 0.3);
+  }
+
   /*モーダル*/
+  .menu-modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 85;
+  }
+
   .login-modal-wrapper, .signup-modal-wrapper {
     display: none;
     position: fixed;
@@ -119,11 +171,11 @@ body {
   .modal {
     position: absolute;
     top: 20%;
-    left: 34%;
+    /* left: 34%; */
     background-color: #e6ecf0;
     padding: 20px 0 40px;
     border-radius: 10px;
-    width: 450px;
+    width: 100%;
     height: auto;
     text-align: center;
   }
@@ -147,7 +199,7 @@ body {
   }
   
   #signup-form input, #login-form input {
-    width: 320px;
+    width: 80%;
     margin-bottom: 20px;
     font-size: 12px;
     padding: 12px 12px;
@@ -167,8 +219,9 @@ body {
   }
   
   .lesson-wrapper {
-    height: 500px;
     padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #f7f7f7;
     text-align: center;
   }
@@ -212,6 +265,10 @@ body {
   .text-active {
     display: block;
   }
+
+  .clear {
+    clear: left;
+  }
   
   /*faq wrapper*/
   .faq-wrapper {
@@ -222,7 +279,7 @@ body {
   }
   
   #faq-list {
-    width: 500px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -292,184 +349,3 @@ body {
     padding-top: 30px;
   }
   
-body {
-  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-/* CSSここから */
-header {
-    background-color:rgba(34, 49, 52, 0.9);
-    height:65px;
-    width:100%;
-    position:fixed;
-    top:0;
-    z-index:10;
-}
-
-.container {
-    width:1170px;
-    margin:0 auto;
-}
-
-.header-left {
-    float:left;
-}
-
-.logo {
-    width:124px;
-    margin-top:20px;
-}
-
-.header-right {
-    float:right;
-    background-color:rgba(255,255,255,0.3);
-}
-
-.header-right:hover {
-    background-color:rgba(255,255,255,0.3);
-    transition:all 0.5s;
-}
-
-.login {
-    color:white;
-    padding:20px 25px;
-    display:block;
-}
-
-.top-wrapper {
-    background-image:url(https://prog-8.com/images/html/advanced/top.png);
-    background-size: cover;
-    padding:180px 0 100px 0;
-    text-align: center;
-    color:white;
-}
-
-.container h1 {
-    font-size:45px;
-    letter-spacing: 5px;
-    opacity:0.7;
-}
-
-.btn-wrapper {
-    margin-top:30px;
-}
-
-.btn-wrapper p {
-    padding:15px 0;
-}
-
-.fa {
-    padding-right:5px;
-}
-
-.btn {
-    padding:8px 24px;
-    border-radius:4px;
-    opacity:0.8;
-    display: inline-block;
-    color:white
-}
-
-.btn:hover {
-    opacity:1;
-}
-
-.signup {
-    background-color: #239b76;
-}
-
-.facebook {
-    background-color: #3b5998;
-    margin-right: 10px;
-}
-
-.twitter {
-    background-color: #55acee;
-}
-
-.lesson-wrapper {
-    height:580px;
-    background-color: #f7f7f7;
-    text-align: center;
-}
-
-.heading {
-    color: #5f5d60;
-    padding-top:80px;
-}
-
-.heading h2 {
-    font-weight: normal;
-}
-
-.lessons{
-    padding-top:50px;
-}
-
-.lesson {
-    float:left;
-    width:25%;
-}
-
-.lesson-icon {
-    position: relative;
-}
-
-.lesson-icon p {
-    position:absolute;
-    top:90px;
-    width:100%;
-    color:white;
-}
-
-.txt-content {
-    width:80%;
-    display:inline-block;
-    color:#b3aeb5;
-    font-size:13px;
-    padding-top:15px;
-}
-
-.message-wrapper {
-    text-align: center;
-}
-
-.message {
-    margin-top:50px;
-    margin-bottom:80px;
-    padding:15px 40px;
-    background-color: #5dca88;
-    opacity:0.8;
-    box-shadow:0 7px #1a7940;
-}
-
-.message:hover {
-    opacity:1;
-    cursor:pointer;
-}
-
-.message:active {
-    box-shadow:none;
-    position: relative;
-    top:7px;
-}
-
-footer {
-    border:1px solid #eee;
-    font-size:12px;
-    color:#b3aeb5;
-}
-
-.footer-left {
-    float:left;
-    font-size:12px;
-    padding-top:10px;
-    margin-bottom:30px;
-}
