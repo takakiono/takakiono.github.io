@@ -3,11 +3,19 @@ $(function(){
     $('#login-show').click(function(){
         $('#login-modal').fadeIn();
     });
+    $('.login-show').click(function(){
+        $('#login-modal').fadeIn();
+    });
+
+    $('.menu-icon').click(function(){
+        $('#menu-modal').fadeIn();
+    });
 
     //modalを閉じる
     $('.close-modal').click(function(){
         $('#signup-modal').fadeOut();
         $('#login-modal').fadeOut();
+        $('#menu-modal').fadeOut();
     });
 
     //signup-modalを表示
